@@ -1,0 +1,8 @@
+{
+“name”: “MinecraftServerBot”,
+“version”: “1.0.0”,
+“description”: “Minecraft server control bot”,
+“main”: “bot.js”,
+“author”: “Camden/Softchair”,
+“dependencies”: {}
+}
