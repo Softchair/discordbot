@@ -19,6 +19,6 @@ client.on('ready', () => {
 
 
 
-bot_secret_token = "NjI0MDIzNDgyMjE2MzQ5NzE4.XYLGiA.QEB_7a36V83I_E3rt7BniXPyDpI"
+bot_secret_token = "BOT TOKEN"
 
 client.login(bot_secret_token)
