@@ -1,8 +1,27 @@
 {
-“name”: “MinecraftServerBot”,
-“version”: “1.0.0”,
-“description”: “Minecraft server control bot”,
-“main”: “bot.js”,
-“author”: “Camden/Softchair”,
-“dependencies”: {}
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "A discordbot for my server",
+  "main": "mybot.js",
+  "scripts": {
+    "test": "-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/softchair/discordbot.git"
+  },
+  "keywords": [
+    "discordbot"
+  ],
+  "author": "Camden/Softchair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/softchair/discordbot/issues"
+  },
+  "homepage": "https://github.com/softchair/discordbot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
 }
