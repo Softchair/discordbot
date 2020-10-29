@@ -1,22 +1,23 @@
 const Discord = require('discord.js');
+const config = require('./config.json');
 const client = new Discord.Client();
-const config = require("./config.json");
 
-client.on('ready', () => {
-    console.log('Ready for action. Logged in as SoftchairBot');
+client.once('ready', () => {
+    console.log('Ready - SoftchairBot');
 });
 
 
 client.on('message', message => {
   if (!message.guild) return;
+});
 
 //Commands - Use config.prefix for prefix "-"
-client.on("message", message) => {
+client.on('message', message => {
   //Dosnt read message if it dosnt start with "-" or if a bot said the message, prevent botception
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
+  if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-  if (message.content.startsWith (config.prefix + 'help') {
-    message.reply('Commands: -help -profilepic -repeat ping')
+  if (message.content.startsWith (config.prefix + 'help')) {
+    message.reply('Commands: -help -profilepic -repeat -ping')
   }
 
   if(message.content.startsWith(config.prefix + 'repeat')) {
@@ -29,13 +30,13 @@ client.on("message", message) => {
     message.channel.send(sentence);
   }
 
-  if (message.content.startsWith(config.prefix + 'profilepic') {
+  if (message.content.startsWith(config.prefix + 'profilepic')) {
     message.reply(message.author.displayAvatarURL());
  }
 
-  if (message.content.startsWith (config.prefix + 'ping') {
+  if (message.content.startsWith (config.prefix + 'ping')) {
     message.channel.send('pong')
   }
 });
 
-client.login('config.token');
+client.login(config.token);
