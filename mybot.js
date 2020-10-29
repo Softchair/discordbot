@@ -12,8 +12,8 @@ client.on('message', message => {
 //set prefix
 const prefix = "-";
 client.on("message", message) => {
-  //no message return
-  if (!message.content.startsWith(prefix)) return;
+  //Dosnt read message if it dosnt start with "-" or if a bot said the message, prevent botception
+  if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith (prefix + 'help') {
     message.reply('Commands: -help -profilepic -repeat ping')
