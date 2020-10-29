@@ -10,32 +10,20 @@ client.on('ready', () => {
 client.on('message', message => {
   if (!message.guild) return;
 
-//Commands - Use config.prefix for prefix "-"
-client.on("message", message) => {
-  //Dosnt read message if it dosnt start with "-" or if a bot said the message, prevent botception
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
-
-  if (message.content.startsWith (config.prefix + 'help') {
-    message.reply('Commands: -help -profilepic -repeat ping')
-  }
-
-  if(message.content.startsWith(config.prefix + 'repeat')) {
-    //take sentence and makes it an array
-    let sentence = message.content.split(' ')
-    //.shift alters list remotes the first things in the list
-    sentence.shift();
-    sentence = sentence.join(' ');
-
-    message.channel.send(sentence);
-  }
-
-  if (message.content.startsWith(config.prefix + 'profilepic') {
-    message.reply(message.author.displayAvatarURL());
- }
-
-  if (message.content.startsWith (config.prefix + 'ping') {
-    message.channel.send('pong')
-  }
+fs.readdir('./events/', (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+        //if not .js file ignore
+        if (!file.endsWith('.js')) return;
+        //load file itself
+        const event = require('./events/${file}');
+        //get event name from file
+        let eventName = file.split('.')[0];
+        //each event will be called with client arguemnt
+        //followed by normal arguments: message, memebers, ect.
+        client.on(eventName, event.bind(null, client));
+        delete require.cache[require.resolve('./events/${file}')];
+    });
 });
 
 client.login('config.token');
