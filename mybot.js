@@ -9,11 +9,17 @@ client.on('ready', () => {
 client.on('message', message => {
   if (!message.guild) return;
 
-  if (message.content === '-help') {
+//set prefix
+const prefix = "-";
+client.on("message", message) => {
+  //no message return
+  if (message.content.startsWith(prefix)) return;
+
+  if (message.content.startsWith (prefix + 'help') {
     message.reply('Commands: -help -profilepic -repeat ping')
   }
 
-  if(message.content.startsWith('-repeat')) {
+  if(message.content.startsWith(prefix + 'repeat')) {
     //take sentence and makes it an array
     let sentence = message.content.split(' ')
     //.shift alters list remotes the first things in the list
@@ -23,11 +29,11 @@ client.on('message', message => {
     message.channel.send(sentence);
   }
 
-  if (message.content === '-profilepic') {
+  if (message.content.startsWith(prefix + 'profilepic') {
     message.reply(message.author.displayAvatarURL());
  }
 
-  if (message.content === 'ping') {
+  if (message.content.startsWith (prefix + 'ping') {
     message.channel.send('pong')
   }
 });
