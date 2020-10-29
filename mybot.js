@@ -13,7 +13,7 @@ client.on('message', message => {
 const prefix = "-";
 client.on("message", message) => {
   //no message return
-  if (message.content.startsWith(prefix)) return;
+  if (!message.content.startsWith(prefix)) return;
 
   if (message.content.startsWith (prefix + 'help') {
     message.reply('Commands: -help -profilepic -repeat ping')
