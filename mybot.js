@@ -5,30 +5,32 @@ const fs = require("fs");
 const client = new Discord.Client();
 const config = require("./config.json");
 client.config = config;
+client.command = new Enmap();
 
 client.on("ready", () => {
-    console.log("Ready for action. Logged in as SoftchairBot");
+  console.log("Ready for action. Logged in as SoftchairBot");
 });
+
+
 
 client.on("message", message => {
   if (!message.guild) return;
-
-fs.readdir("./events/", (err, files) => {
-    if (err) return console.error(err);
-    files.forEach(file => {
-        //if not .js file ignore
-        if (!file.endsWith(".js")) return;
-        //load file itself
-        const event = require("./events/" + file);
-        //get event name from file
-        let eventName = file.split(".")[0];
-        //each event will be called with client arguemnt
-        //followed by normal arguments: message, memebers, ect.
-        client.on(eventName, event.bind(null, client));
-    });
 });
 
-client.command = new Enmap();
+fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    //if not .js file ignore
+    if (!file.endsWith(".js")) return;
+    //load file itself
+    const event = require("./events/" + file);
+    //get event name from file
+    let eventName = file.split(".")[0];
+    //each event will be called with client arguemnt
+    //followed by normal arguments: message, memebers, ect.
+    client.on(eventName, event.bind(null, client));
+  });
+});
 
 fs.readdir("./commands/", (err, files) => {
   if (err) return console.error(err);
@@ -42,7 +44,6 @@ fs.readdir("./commands/", (err, files) => {
     // Store the whole thing in the command Enmap. Not currently running it
     client.command.set(commandName, props);
   });
-});
 });
 
 client.login(config.token);
