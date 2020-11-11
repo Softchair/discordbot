@@ -1,7 +1,3 @@
-//Commands - Use config.prefix for prefix "-"
-client.on("message", message) => {
-  //Dosnt read message if it dosnt start with "-" or if a bot said the message, prevent botception
-  if (!message.content.startsWith(prefix) || message.author.bot) return;
 
   if (message.content.startsWith (config.prefix + 'help') {
     message.reply('Commands: -help -profilepic -repeat ping')
