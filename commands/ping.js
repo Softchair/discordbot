@@ -1,3 +1,3 @@
 exports.run = (client, message, args) => {
-  message.channel.send("davids a loser!").catch(console.error);
+  message.channel.send("ping-").catch(console.error);
 };

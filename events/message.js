@@ -5,6 +5,7 @@ module.exports = (client, message) => {
   //Ignore message not starting with prefix
   if (message.content.indexOf(client.config.prefix) !== 0) return;
 
+  console.log(message.author);
   console.log(client.command);
 
   //Standard argument/command name define

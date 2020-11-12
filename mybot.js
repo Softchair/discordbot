@@ -11,8 +11,6 @@ client.on("ready", () => {
   console.log("Ready for action. Logged in as SoftchairBot");
 });
 
-
-
 client.on("message", message => {
   if (!message.guild) return;
 });
