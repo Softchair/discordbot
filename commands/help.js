@@ -6,11 +6,11 @@ exports.run = (client, message, args) => {
     .setURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
     .addFields({
       name: "Commands",
-      value: "-Help\n\n-Profilepic\n\n-Repeat\n\n-Ping",
+      value: "-Help\n\n-Profilepic\n\n-Repeat\n\n-Ping\n\nWhoami",
       inline: true
     }, {
       name: "Description",
-      value: "Responds with this message\n\nSends users profile picture\n\nRepeats the message, as the bot\n\nTests bots onlineness, also latency",
+      value: "Responds with this message\n\nSends users profile picture\n\nRepeats the message, as the bot\n\nTests if bots online, also latency\n\nGives you your name, id, and if you are a bot",
       inline: true
     }, {
       name: "Arguments",
