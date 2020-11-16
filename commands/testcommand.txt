@@ -1,0 +1,5 @@
+//exports.run = (client, message, args) => {
+//command here
+//}
+
+//use this for formatting commands
