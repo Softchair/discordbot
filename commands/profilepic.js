@@ -20,6 +20,12 @@ function getUserFromMention(mention) {
     }
     return message.channel.send(user.username + "'s avatar: " + user.displayAvatarURL());
   }
-  else 
+  else
     return message.channel.send(message.author.username + "'s avatar: " + message.author.displayAvatarURL());
+};
+
+module.help = {
+  name: "Profile Picture",
+  description: "Gets yours or someone elses profile picture",
+  usage: "profilepic [User]",
 }

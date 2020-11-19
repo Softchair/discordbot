@@ -1,5 +1,11 @@
-//exports.run = (client, message, args) => {
-//command here
-//}
+exports.run = (client, message, args) => {
+command here
+}
 
-//use this for formatting commands
+module.help = {
+  name: "NaMe",
+  description: "DeScRipTiOn",
+  usage: "AlTerNaTiVes",
+}
+
+/use this for formatting commands

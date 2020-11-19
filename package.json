@@ -24,6 +24,7 @@
     "dotenv": "^8.2.0",
     "enmap": "^5.8.2",
     "express": "^4.17.1",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "math.js": "^1.1.46"
   }
 }

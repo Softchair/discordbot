@@ -6,4 +6,10 @@ exports.run = (client, message, args) => {
   sentence = sentence.join(' ');
 
   message.channel.send(sentence);
+};
+
+module.help = {
+  name: "Repeat",
+  description: "Repeats your message, as the bot",
+  usage: "reapeat [message]",
 }

@@ -6,17 +6,23 @@ exports.run = (client, message, args) => {
     .setURL("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
     .addFields({
       name: "Commands",
-      value: "-Help\n\n-Profilepic\n\n-Repeat\n\n-Ping\n\nWhoami",
+      value: "-Help\n\n-Profilepic\n\n-Repeat\n\n-Ping\n\n-Whoami\n\n-cf (coinflip)",
       inline: true
     }, {
       name: "Description",
-      value: "Responds with this message\n\nSends users profile picture\n\nRepeats the message, as the bot\n\nTests if bots online, also latency\n\nGives you your name, id, and if you are a bot",
+      value: "Responds with this message\n\nSends users profile picture\n\nRepeats the message, as the bot\n\nTests if bots online, also latency\n\nGives you your name, id, and if you are a bot\n\nResponds with heads or tails!",
       inline: true
     }, {
       name: "Arguments",
-      value: "None\n\nMention a user\n\nNone\n\nNone",
+      value: "None\n\nMention a user\n\nNone\n\nNone\n\nNone\n\nNone",
       inline: true
     }, )
     .setTimestamp()
   message.channel.send(helpEmbed);
+};
+
+module.help = {
+  name: "Help",
+  description: "Displays this message",
+  usage: "help",
 }
