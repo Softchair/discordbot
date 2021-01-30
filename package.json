@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/softchair/discordbot#readme",
   "dependencies": {
-    "discord.js": "^12.2.0",
-    "dotenv": "^8.2.0",
-    "enmap": "^5.8.2",
-    "express": "^4.17.1",
-    "fs": "^0.0.1-security",
-    "math.js": "^1.1.46"
+    "discord.js": "^12.5.1",
+    "dotenv": "file:node_modules/dotenv",
+    "enmap": "file:node_modules/enmap",
+    "express": "file:node_modules/express",
+    "fs": "file:node_modules/fs",
+    "math.js": "file:node_modules/math.js"
   }
 }

@@ -6,6 +6,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 client.config = config;
 client.command = new Enmap();
+client.status = new Enmap();
 
 client.on("ready", () => {
   console.log("Ready for action. Logged in as SoftchairBot");
@@ -14,6 +15,7 @@ client.on("ready", () => {
 client.on("message", message => {
   if (!message.guild) return;
 });
+
 
 fs.readdir("./events/", (err, files) => {
   if (err) return console.error(err);
