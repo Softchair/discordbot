@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
 
     //Owner only
-    if (!message.author.id != "286647094456877056") {
+    if (message.author.id !== "286647094456877056") {
       return message.channel.send("This command can only be used by Softchair!")
     };
 
