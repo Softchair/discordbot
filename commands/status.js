@@ -5,6 +5,7 @@ module.exports = {
   description: "Change the bot status",
   usage: "status <here>",
   category: "owner",
+}
 
   run: async (client, message, args) => {
 
