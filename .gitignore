@@ -5,3 +5,4 @@ data/
 .git/
 config.json
 Run bot.bat
+config/default.json

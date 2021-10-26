@@ -1,6 +1,6 @@
-const math = require("math.js");
+//const math = require("math.js");
 exports.run = (client, message, args) => {
-  var random = math.random()
+  var random = Math.random()
   console.log(random)
   if (random < 0.5) {
     message.channel.send("Heads!");
