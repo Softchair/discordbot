@@ -3,7 +3,7 @@ const Enmap = require("enmap");
 const fs = require("fs");
 
 const client = new Discord.Client();
-const config = require("./config.json");
+const config = require('getconfig');
 client.config = config;
 client.command = new Enmap();
 client.status = new Enmap();

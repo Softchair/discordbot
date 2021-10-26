@@ -13,19 +13,30 @@ exports.run = (client, message, args) => {
 
   //Gets the data and adds it to vars
   req.addEventListener("load", function() {
-    if (req.status == 200 && req.readyState == 4) {
-      var response = JSON.parse(req.responseText);
-      document.getElementById("title").textContent = response.title;
-      var date = document.getElementById("date").textContent = response.date;
-      var picture = document.getElementById("pic").src = response.hdurl;
-      var info = document.getElementById("explanation").textContent = response.explanation;
-    }
+    //if (req.status == 200 && req.readyState == 4) {
+    // var response = JSON.parse(req.responseText);
+    // var title = getElementById("title");
+    // var date = getElementById("date");
+    // var picture = getElementById("pic");
+    // var info = getElementById("explanation");
+    //}
   })
 
+  setTimeout(function() {
+    // message.channel.send(picture);
+    // message.channel.send(title);
+    // message.channel.send(date);
+    // message.channel.send(info);
+    message.channel.send("Work in progress, coming in java update")
+  }, 5000);
+
   //Send its to the channel
-  message.channel.send(picture);
-  message.channel.send(date);
-  message.channel.send(info);
+  // function send() {
+  //   message.channel.send(picture);
+  //   message.channel.send(title);
+  //   message.channel.send(date);
+  //   message.channel.send(info);
+  // };
 
 }
 
