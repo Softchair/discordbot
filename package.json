@@ -25,6 +25,7 @@
     "enmap": "file:node_modules/enmap",
     "express": "file:node_modules/express",
     "fs": "file:node_modules/fs",
-    "math.js": "file:node_modules/math.js"
+    "math.js": "file:node_modules/math.js",
+    "xmlhttprequest": "^1.8.0"
   }
 }
