@@ -1,9 +1,7 @@
 #ignore config which has bot token config.json
 
-.config.json
 node_modules/
 data/
 .git/
 config.json
-Run bot.bat
 Run bot.bat
