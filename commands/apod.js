@@ -1,10 +1,14 @@
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+
+const config = require('getconfig');
+
 exports.run = (client, message, args) => {
 
   //Set up the call request
   var req = new XMLHttpRequest();
   var url = "https://api.nasa.gov/planetary/apod?api_key=";
 
-  req.open("GET", url + nasaAPIkey);
+  req.open("GET", url + config.nasaAPIkey);
   req.send();
 
   //Gets the data and adds it to vars
