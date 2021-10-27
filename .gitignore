@@ -5,6 +5,8 @@
 # Personal ignored files
 
 /.gradle/
+/.idea/
 /build/
 /commands/
 /config/
+/gradle/
