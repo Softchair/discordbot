@@ -1,6 +1,7 @@
 # discordbot
 Softchairs Discord bot
 
-This branch is for the Java rewrite im working on that I will be able to understand better
+The newly java rewritten verison of my discord bot, using JDA!
 
-This is a work in progress
+There are still many things to add and clean up but it works!
+With all the same commands as before (except the help command...)
