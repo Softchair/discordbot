@@ -1,2 +1,3 @@
 rootProject.name = 'discordbot'
+include 'botmain'
 
