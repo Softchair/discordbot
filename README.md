@@ -1,7 +1,6 @@
 # discordbot
+Softchairs Discord bot
 
-Personal use discord bot with many features personalized for me/my discord server
+This branch is for the Java rewrite im working on that I will be able to understand better
 
-Use node mybot.js to launch the bot
-
-Make sure to have node.js installed aswell as discord.js
+This is a work in progress

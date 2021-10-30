@@ -1,8 +1,14 @@
-#ignore config which has bot token config.json
+# Default ignored files
+/shelf/
+/workspace.xml
 
-node_modules/
-data/
-.git/
-config.json
-Run bot.bat
-config/default.json
+# Personal ignored files
+
+/.gradle/
+/.idea/
+/build/
+/commands/
+/config/
+/gradle/
+gradlew.bat
+config.properties
