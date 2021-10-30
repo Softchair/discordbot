@@ -11,3 +11,4 @@
 /config/
 /gradle/
 gradlew.bat
+config.properties
