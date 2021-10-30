@@ -26,7 +26,9 @@ public class botmain {
 
         bot = JDABuilder.createDefault(key); //Creates a new bot with key
         bot.setActivity(Activity.playing("Am I working again??"));
+
         bot.addEventListeners(new Commands());
+
         bot.build();
 
         
