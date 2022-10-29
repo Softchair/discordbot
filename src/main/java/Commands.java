@@ -20,6 +20,9 @@ public class Commands extends ListenerAdapter {
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
 
+        //Prefix for commands, can be changed easily
+        String prefix = "!";
+
         //Setup commonly used variables
         User author = event.getAuthor(); 
 
@@ -41,20 +44,22 @@ public class Commands extends ListenerAdapter {
 
         //If statements to handle commands
         //In future, refactor this so its not as complex
-        if (msg.equals("!cf") || msg.equals("!coinflip")) {
+        if (msg.equals(prefix + "cf") || msg.equals(prefix + "coinflip")) {
             coinflip();
-        } else if (msg.startsWith("!repeat")) {
+        } else if (msg.startsWith(prefix + "repeat")) {
             repeat();
-        } else if (msg.startsWith("!whoami")) {
+        } else if (msg.startsWith(prefix + "whoami")) {
             whoAmI();
-        } else if (msg.startsWith("!pfp") || msg.startsWith("!profilepic")) {
+        } else if (msg.startsWith(prefix + "pfp") || msg.startsWith(prefix + "profilepic")) {
             profilePic();
-        } else if (msg.equals("!ping")) {
+        } else if (msg.equals(prefix + "ping")) {
             onlineStatus();
-        } else if (msg.startsWith("!status")) {
+        } else if (msg.startsWith(prefix + "status")) {
             statusMessage();
-        } else if (msg.equals("!shutdown")) {
+        } else if (msg.equals(prefix + "shutdown")) {
             shutdown();
+        } else if (msg.equals(prefix + "boo")) {
+            boo();
         }
 
         /**
@@ -139,6 +144,19 @@ public class Commands extends ListenerAdapter {
                 channel.sendMessage("You are not the owner, this command doesn't work for you").queue();
             }
         } 
+
+        /**
+        Boo command
+        Scares everyone but owner
+        */
+        private void boo() {
+            if (author.getId().equals("286647094456877056")) {
+                channel.sendMessage("I cant scare you, im your son!").queue();
+            } else {
+                channel.sendMessage("BOO!").queue();
+                channel.sendMessage("Got you with that didnt i :)").queue();
+            }
+        }
 
         /**
         Shutdown commands
