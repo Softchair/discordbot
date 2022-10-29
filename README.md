@@ -1,7 +1,12 @@
 # discordbot
 Softchairs Discord bot
 
-The newly java rewritten verison of my discord bot, using JDA!
+Currently being rewritten in java using JDA
 
-There are still many things to add and clean up but it works!
-With all the same commands as before (except the help command...)
+Many features do not work currently as they are still being ported over from the javascript version
+
+Alongside that, the code is also constently being cleaned up as its a bit of a mess...
+let me know if there are any bugs or anything and I will try and fix them.
+
+Thanks!
+-Softchair/Cam
