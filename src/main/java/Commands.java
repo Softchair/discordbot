@@ -158,6 +158,28 @@ public class Commands extends ListenerAdapter {
             }
         }
 
+        private void calc() {
+            char sign;
+            int num1 = null;
+            int num2;
+
+            for (int i = 0; i < msg.length()) {
+                char curChar = msg.charAt(i);
+
+                if(Character.isDigit(curChar)) {
+                    num1 = curChar
+                    if (num1 != null) {
+                        num2 = curChar
+                    }
+                } else {
+                    sign = curChar;
+                }
+            }
+
+            int ans = num1+num2;
+            channel.sendMessage(ans).queue();
+        }
+
         /**
         Shutdown commands
         Turns off the bot
